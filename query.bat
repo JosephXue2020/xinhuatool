@@ -1,0 +1,1 @@
+.\cmd\query\query.exe
