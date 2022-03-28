@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html language="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>产品详情</title>
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <!--<meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible" />-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+
+    <link href="/images/favicon.ico" mce_href="/images/favicon.ico" rel="bookmark shortcut icon" type="image/x-icon" />
+
+    <meta id="global" contextpath="" version="1.75.0"></meta>
+    <meta id="mallSiteUrl" contextpath="	
+				http://home.xinhua-news.com
+		
+" version="1.75.0"></meta>
+    <script type="text/javascript">
+        //javascript中使用全局URL基础路径
+        var $webroot = '/';
+    </script>
+    <link href="/js/jquery/zebra_dialog/css/flat/zebra_dialog.css?version=1.75.0" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/js/jquery/zebra_dialog/zebra_dialog_extend.css?version=1.75.0" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/js/jquery/mCustomScrollbar/jquery.mCustomScrollbar.css?version=1.75.0" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/js/jquery/blueimp-gallery/blueimp-gallery.css?version=1.75.0" rel="stylesheet" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="/js/jquery/jquery-1.11.3.min.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/jquery/jquery.rotate.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/javascript/json2/json2.js?version=1.75.0"></script>
+
+    <!-- 系统常量 -->
+    <script type="text/javascript" src="/js-i18n/zh_CN/common/system-constant.js?version=1.75.0"></script>
+
+    <!-- 辅助jQuery版本升级过渡插件 -->
+    <script type="text/javascript" src="/js/jquery/jquery-migrate-1.2.1.min.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/jquery/jquery.metadata.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/framework/website/core/e.core.web.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/framework/website/core/e.url.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/framework/manage/extend/ebc.utils.js?version=1.75.0"></script>
+
+    <!-- 消息提示框 -->
+    <script type="text/javascript" src="/js/jquery/zebra_dialog/zebra_dialog.src.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/framework/website/core/e.dialog.js?version=1.75.0"></script>
+
+    <!-- 拖拽插件 -->
+    <script type="text/javascript" src="/js/jquery/jquery-ui/jquery-ui.min.js?version=1.75.0"></script>
+    <!--jplayer-->
+    <script type="text/javascript" src="/js-i18n/zh_CN/common/player/jplayer/jPlayer-2.9.1/jplayer/jquery.jplayer.min.js?version=1.75.0"></script>
+    <!-- Bootstrap framework -->
+    <link rel="stylesheet" href="/js/bootstrap/core/2.3.2/css/bootstrap.min.css?version=1.75.0" />
+    <link rel="stylesheet" href="/js/bootstrap/core/2.3.2/css/bootstrap-responsive.css?version=1.75.0" />
+    <link rel="stylesheet" href="/js/bootstrap/extend/css/bootstrap_panel.css?version=1.75.0" />
+
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="/js/bootstrap/plugin/font-awesome-3.2.1/css/font-awesome.min.css?version=1.75.0" />
+    <!--[if IE 7]>
+<link rel="stylesheet" href="/js/bootstrap/plugin/font-awesome-3.2.1/css/font-awesome-ie7.min.css?version=1.75.0">
+<![endif]-->
+
+    <!-- 使IE8兼容HTML5 -->
+    <!--[if lte IE 8]>
+<link rel="stylesheet" href="/js/bootstrap/theme/gebo_admin/css/ie.css?version=1.75.0" />
+<script src="/js/bootstrap/theme/gebo_admin/js/ie/html5.js?version=1.75.0"></script>
+<script src="/js/bootstrap/theme/gebo_admin/js/ie/respond.js?version=1.75.0"></script>
+<![endif]-->
+
+
+    <!-- Bootstrap兼容IE6浏览器 -->
+    <!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="/js/jsLib/bootstrap/iehack/css/bootstrap-ie6.css?version=1.75.0">
+<link rel="stylesheet" type="text/css" href="/js/jsLib/bootstrap/iehack/css/ie.css?version=1.75.0">
+<script type="text/javascript" src="/js/jsLib/bootstrap/iehack/bootstrap-ie.js?version=1.75.0"></script>
+<![endif]-->
+
+
+    <!-- hidden elements width/height -->
+    <script type="text/javascript" src="/js/bootstrap/theme/gebo_admin/js/jquery_cookie.min.js?version=1.75.0"></script>
+    <!-- bootstrap core -->
+    <script type="text/javascript" src="/js/bootstrap/core/2.3.2/js/bootstrap.min.js?version=1.75.0"></script>
+    <!-- bootstrap plugins -->
+
+    <!-- 回到页面顶部插件 -->
+    <link rel="stylesheet" media="screen,projection" href="/js/jquery/UItoTop/css/ui.totop.css?version=1.75.0" />
+    <script type="text/javascript" src="/js/jquery/UItoTop/easing.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/jquery/UItoTop/jquery.ui.totop.js?version=1.75.0"></script>
+
+    <!-- 前店全局公用样式 -->
+
+    <!-- 基于Bootstrap的 -->
+    <!-- 基于Bootstrap的弹出窗口 -->
+    <script type="text/javascript" src="/js/bootstrap/extend/js/b.dialog.js?version=1.75.0"></script>
+    <!-- 基于Bootstrap的统一表单初始化 -->
+    <script type="text/javascript" src="/js/bootstrap/extend/js/b.ui.js?version=1.75.0"></script>
+
+    <!-- 模块化脚本基础库 -->
+    <!-- edit by linby 20160511  为第三方店铺工作台增加  等待框架整合插件 -->
+
+    <script type="text/javascript" src="/js/javascript/requirejs/require.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/framework/website/extend/requirejs.common.js?version=1.75.0"></script>
+    <!-- 前店基础功能脚本 -->
+    <script type="text/javascript" src="/js-i18n/zh_CN/public/util.js?version=1.75.0"></script>
+    <!-- 前店业务功能脚本 -->
+    <script type="text/javascript" src="/js-i18n/zh_CN/public/ebc.busi.util.js?version=1.75.0"></script>
+    <!--购物车路径线-->
+    <script type="text/javascript" src="/js/jquery/fly/jquery.fly.min.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/jquery/fly/requestAnimationFrame.js?version=1.75.0"></script>
+    <!--公用函数-->
+    <script type="text/javascript" src="/js-i18n/zh_CN/util.js?version=1.75.0"></script>
+    <link rel="stylesheet" href="/js/bootstrap/theme/gebo_admin/css/style_extend.css?version=1.75.0" />
+
+    <!--当前站点-->
+    <input type="hidden" id="currentSite" value="1" />
+    <script type="text/javascript">
+        window["_BFD"] = window["_BFD"] || {};
+        _BFD.BFD_INFO = {
+            "page_type": "integrated" //当前页面全称，请勿修改
+        };
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type: 'POST',
+            url: $webroot + 'site/currentSite',
+            dataType: "json",
+            success: function(data) {
+                /*
+                北京：1
+                亚太：2
+                欧洲：3
+                北美：4
+                */
+                var site = '';
+                if (data == "2") {
+                    site = "_as";
+                } else if (data == "3") {
+                    site = "_eu";
+                } else if (data == "4") {
+                    site = "_am";
+                } else {
+                    site = '';
+                }
+                bfdCount(site);
+                $("#currentSite").val(data);
+            },
+            error: function() {
+                console.log("获取站点异常")
+                bfdCount();
+            }
+        });
+
+
+        function bfdCount(site) {
+            site = site || '';
+            window["_BFD"] = window["_BFD"] || {};
+            _BFD.client_id = "Cxinhuashe"; //当前网站客户标识，由百分点提供
+            _BFD.BFD_USER = {
+                "user_id": "CH_2017062517255700140" //网站当前用户id，如果未登录就为0或空字符串
+            };
+            _BFD.script = document.createElement("script");
+            _BFD.script.type = "text/javascript";
+            _BFD.script.async = true;
+            _BFD.script.charset = "utf-8";
+            _BFD.script.src = (('https:' == document.location.protocol ? 'https://' : 'http://') + 'ubs.xinhua-news.cn/xinhuashe' + site + '.js');
+            document.getElementsByTagName("head")[0].appendChild(_BFD.script);
+        }
+    </script>
+    <script language="javascript">
+        $.metadata.setType("attr", "validate");
+        GLOBAL = {
+            WEBROOT: $("#global").attr("contextpath"),
+            VERSION: $("#global").attr("version"),
+            MALLSITEURL: $("#mallSiteUrl").attr("contextpath"),
+            IMAGEPATH: "/images"
+        };
+    </script>
+    <link rel="stylesheet" href="/js/bootstrap/theme/gebo_admin/css/style.css?version=1.75.0" />
+    <link href="/js/jquery/zebra_dialog/css/flat/zebra_dialog.css?version=1.75.0" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/js/jquery/zebra_dialog/zebra_dialog_extend.css?version=1.75.0" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/js/bootstrap/theme/gebo_admin/css/style_extend.css?version=1.75.0" />
+    <link rel="Stylesheet" type="text/css" href="/css/public.css?version=1.75.0" />
+    <link rel="Stylesheet" type="text/css" href="/css/index.css?version=1.75.0" />
+    <link href="/js/jquery/mCustomScrollbar/jquery.mCustomScrollbar.css?version=1.75.0" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/js/jquery/blueimp-gallery/blueimp-gallery.css?version=1.75.0" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body class="dialog-body pro-dgpd zh_CN" language="zh_CN">
+    <div id="gdsDetailInfos">
+
+
+
+
+
+
+
+
+
+
+
+
+        <style>
+            .proHide .item-wrap {
+                height: 450px;
+                overflow: hidden;
+            }
+            
+            .toNewPage {
+                position: absolute;
+                left: 590px;
+                z-index: 100;
+            }
+        </style>
+        <div class="pro-dialog">
+            <div class="dialog-cont">
+                <div class="clearfix">
+                    <div class="pro-left pull-left">
+                        <input type="hidden" id="authCheck" value="false" />
+                        <input type="hidden" id="gdsTypeId" value="2" />
+                        <input type="hidden" id="GDS_TYPE_GG" value="2" />
+                        <input type="hidden" id="XHS_SHOW_CONTEXT_BYGDSTYPE" value="2,9,20" />
+                        <input type="hidden" id="CHECK_SHOW_PERCENT" value="0.5" />
+                        <input type="hidden" id="CHECK_SHOW_PERCENT_VIDEO" value="1.0" />
+                        <input type="hidden" id="authCheckFlag" value="1" />
+                        <input type="hidden" id="TIMING_PAY" value="20" />
+                        <input type="hidden" id="TIME_BUCKET_PAY" value="10" />
+                        <input type="hidden" id="buyType" value="10" />
+
+                        <!--分享 start-->
+
+                        <div class="pro-opt clearfix">
+                            <div class="pull-left">
+                                <a href="javascript:;" class="s-small"><i class="micon micon-font01"></i></a>
+                                <a href="javascript:;" class="s-lag"><i class="micon micon-font02"></i></a>
+                            </div>
+
+                        </div>
+                        <script type="text/javascript" src="/js-i18n/zh_CN/common/share/baidu-share.js?version=1.75.0"></script>
+                        <script type="text/javascript" src="/js-i18n/zh_CN/common/share/share.js?version=1.75.0"></script>
+
+                        <!--分享 end-->
+                        <a class="toNewPage" href="/gdsdetailxhs/detail?gdsId=101002022031290001898&libId=3" target="_blank">
+                            <i class="iconNew-enlarge"></i>
+                        </a>
+
+
+                        <!--产品详情图片 start-->
+                        <div class="pro-imgs-show">
+                            <!--产品详情图片 start-->
+                            <div class="bd">
+                                <span class="page"></span>
+                                <ul id="links">
+                                    <li>
+                                        <a href="#"><img src="http://img.xinhua-news.com/archive/image?dest=jNMDEkJnhoczkyISt8MTY0NzU3MDYwODcyNHwvZGF0YS9jb252ZXJ0VGVtcC9haXBpbndlYi9hcmNoaXZlaW1nLzIwMjIwMzE4LzEvMTAxMDAyMDIyMDMxMjkwMDAxODk4LmpwZ3wxfDQ5MHgzMzbjY=" /></a>
+                                        <div class="pro-txt mscroll">
+                                            <pre class="pro-txt-scroll">
+                                        <div class="gdsDesc his-detail-pic search-tag-02240201 list-detail-page" style="margin-top: -19px;" >新华社照片，外代，2022年3月12日
+    （外代一线）（1）庆祝洒红节
+    3月11日，人们在印度北方邦伯尔萨纳庆祝洒红节。
+    洒红节是印度教的春节，意味着春回大地，万物复苏。按照传统习俗，在洒红节这天，人们要在脸上和身上涂上颜料，还要相互泼洒五颜六色的粉末，尽情狂欢。
+    新华社/法新</div>
+                                    </pre>
+                                            <i class="micon img-dmore"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--产品详情图片 end-->
+                        <div class="pro-share">
+                            <a href="javascript:;" id="carBlock" class="micon-onload multimedia_download" multimedia_download_his gdsId="101002022031290001898" gdsLibId="3">
+                                <span>
+                    		<i class="share-icon share08 search-tag-20030401"></i>
+                    		<i class="his-buy-des" type="detail-download-btn">购买下载</i>                    	</span>
+                            </a>
+
+                            <a href="javascript:;" class="">
+                                <span>
+                                <i class="copy-icon" search-tag="2021111701"></i>
+                                <input id="hisDesTocopy" value="新华社照片，外代，2022年3月12日
+    （外代一线）（1）庆祝洒红节
+    3月11日，人们在印度北方邦伯尔萨纳庆祝洒红节。
+    洒红节是印度教的春节，意味着春回大地，万物复苏。按照传统习俗，在洒红节这天，人们要在脸上和身上涂上颜料，还要相互泼洒五颜六色的粉末，尽情狂欢。
+    新华社/法新" style="display:none;">
+                                <i class="his-des-copy">复制图片说明</i>                            </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <script>
+                        $("body").on("click", ".his-des-copy", function() {
+                            $("#hisDesTocopy").show().select();
+                            document.execCommand("copy");
+                            $("#hisDesTocopy").hide();
+                        });
+                    </script>
+
+                    <!--右侧属性 start-->
+                    <div class="pro-right pull-right ptop proHide">
+                        <div class="pro-xl-list " style="height: 500px">
+                            <ul class="xl-tit">
+                                <li class="active">
+                                    <a href="#gq" data-toggle="tab">稿签</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active " id="gq">
+                                    <div class="pro-dt-cont">
+
+                                        <div class="item-wrap mscroll upscroll" id="pro-dt" search-tag="2021051101">
+                                            <!--属性信息   start-->
+                                            <input type="hidden" id="detailType" value="2">
+                                            <div class="item  show"><label>稿号: </label><span>101002022031290001898</span></div>
+                                            <div class="item  show"><label>标题: </label><span>（外代一线）（1）庆祝洒红节</span></div>
+                                            <div class="item  show"><label>播发时间: </label><span>2022-03-12 19:31:14</span></div>
+                                            <div class="item  show"><label>作者: </label>
+
+                                                <a href="javascript:void(0)">
+                                                    <span class="author-list">ANINDITO MUKHERJEE</span>
+                                                </a>
+
+                                            </div>
+                                            <div class="item  show"><label>来源: </label><span></span></div>
+                                            <div class="item  show"><label>线路: </label><span>外代图片一线,中国照片档案馆图片</span></div>
+                                            <div class="item  show"><label>CNML标识: </label><span>XxjpsgC007255_20220312_PEPFN0.xml</span></div>
+                                            <div class="item  show"><label>底片号: </label><span></span></div>
+                                            <div class="item  show"><label>语言: </label><span></span></div>
+                                            <div class="item  show"><label>字数: </label><span>154</span></div>
+                                            <div class="item  show"><label>图片大小: </label><span id="imgSize">1356535</span></div>
+                                            <div class="item  show"><label>价格: </label><span>CNY0</span></div>
+                                            <div class="item  show">
+                                                <label>富标签: </label>
+                                                <div class="key-wrap">
+                                                    <div class="paramheight">
+                                                        <a class="keyword richTagClick" title="庆祝" href="javascript:void(0)" keyword="庆祝">
+                        庆祝
+                    </a>
+                                                        <a class="keyword richTagClick" title="洒红节" href="javascript:void(0)" keyword="洒红节">
+                        洒红节
+                    </a>
+                                                        <a class="keyword richTagClick" title="春回大地" href="javascript:void(0)" keyword="春回大地">
+                        春回大地
+                    </a>
+                                                        <a class="keyword richTagClick" title="传统习俗" href="javascript:void(0)" keyword="传统习俗">
+                        传统习俗
+                    </a>
+                                                        <a class="keyword richTagClick" title="北方邦" href="javascript:void(0)" keyword="北方邦">
+                        北方邦
+                    </a>
+                                                        <a class="keyword richTagClick" title="印度教" href="javascript:void(0)" keyword="印度教">
+                        印度教
+                    </a>
+                                                        <a class="keyword richTagClick" title="粉末" href="javascript:void(0)" keyword="粉末">
+                        粉末
+                    </a>
+                                                        <a class="keyword richTagClick" title="颜料" href="javascript:void(0)" keyword="颜料">
+                        颜料
+                    </a>
+                                                        <a class="keyword richTagClick" title="万物" href="javascript:void(0)" keyword="万物">
+                        万物
+                    </a>
+                                                        <a class="keyword richTagClick" title="狂欢" href="javascript:void(0)" keyword="狂欢">
+                        狂欢
+                    </a>
+                                                        <a class="keyword richTagClick" title="泼洒" href="javascript:void(0)" keyword="泼洒">
+                        泼洒
+                    </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--属性信息 end-->
+                                        </div>
+                                        <div class="btn-wrap" id="buydiv">
+                                        </div>
+
+                                        <script>
+                                            $(function() {
+                                                // 图片大小处理
+                                                var gdsType = $("#detailType").val();
+                                                if (gdsType === '2' || gdsType === '9') {
+                                                    var unit = 'K';
+                                                    var imgSize = (Number($("#imgSize").text()) / 1024).toFixed(2);
+                                                    if (imgSize > 1024) {
+                                                        imgSize = (imgSize / 1024).toFixed(2);
+                                                        unit = 'M';
+                                                    }
+                                                    imgSize = imgSize + unit;
+                                                    $("#imgSize").text(imgSize);
+                                                }
+                                            })
+                                        </script>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--右侧属性 end-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery/flexImages/flexImages-detail.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/bootstrap/theme/gebo_admin/js/jquery.imagesloaded.min.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/jquery/imgPhotoDialog/imgPhotoDialog.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/jquery/SuperSlide/jquery.SuperSlide.2.1.1.source.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/jquery/artTemplate/template-debug.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/jquery/mCustomScrollbar/jquery.mousewheel.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/jquery/mCustomScrollbar/jquery.mCustomScrollbar.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/bootstrap/extend/js/b.dialog.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/jquery/zebra_dialog/zebra_dialog.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/framework/website/core/e.dialog.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/jquery/blueimp-gallery/jquery.blueimp-gallery.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js/jquery/blueimp-gallery/e.image.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js-i18n/zh_CN/goods/gdsdetail/gdsdetail-multimedia.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js-i18n/zh_CN/work/history/history-gdslist-download.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js-i18n/zh_CN/goods/common/gdsopendetail-history.js?version=1.75.0"></script>
+    <script type="text/javascript" src="/js-i18n/zh_CN/goods/gdsdetail/gds-detail-iframe.js?version=1.75.0"></script>
+
+</body>
+
+</html>

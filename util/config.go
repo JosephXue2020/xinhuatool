@@ -2,6 +2,7 @@ package util
 
 import (
 	"log"
+	"strconv"
 	"time"
 
 	"github.com/go-ini/ini"
@@ -12,6 +13,8 @@ var Cfg *ini.File
 var Datetime *time.Time
 var Account string
 var Passwd string
+var WorkerNum int
+var DownloaderNum int
 
 func init() {
 	var err error
@@ -23,6 +26,8 @@ func init() {
 	LoadDatetime()
 
 	LoadAuth()
+	LoadWorkerNum()
+	LoadDownloaderNum()
 }
 
 func LoadDatetime() {
@@ -90,4 +95,40 @@ func LoadAuth() {
 		log.Fatal(err)
 	}
 	Passwd = v.String()
+}
+
+func LoadWorkerNum() {
+	sec, err := Cfg.GetSection("worker")
+	if err != nil {
+		return
+	}
+
+	v, err := sec.GetKey("WorkerNum")
+	if err != nil {
+		return
+	}
+
+	temp, err := strconv.Atoi(v.String())
+	if err != nil {
+		return
+	}
+	WorkerNum = temp
+}
+
+func LoadDownloaderNum() {
+	sec, err := Cfg.GetSection("downloader")
+	if err != nil {
+		return
+	}
+
+	v, err := sec.GetKey("DownloaderNum")
+	if err != nil {
+		return
+	}
+
+	temp, err := strconv.Atoi(v.String())
+	if err != nil {
+		return
+	}
+	DownloaderNum = temp
 }

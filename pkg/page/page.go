@@ -61,6 +61,7 @@ func HistoryFrame(sess *login.Session) (*http.Response, error) {
 func SearchKeyword(sess *login.Session, kw, participle string, pg, tp, showDataFlag int) (*http.Response, error) {
 	m := util.CopyMap(SampleData)
 	m["keyword"] = kw
+	m["pageNumber"] = strconv.Itoa(pg)
 	m["gdsTypeIds"] = "type_" + strconv.Itoa(tp)
 	m["showDataFlag"] = strconv.Itoa(showDataFlag)
 	m["participle"] = participle
@@ -87,10 +88,10 @@ type Meta struct {
 type ArticleList struct {
 	text           string
 	metas          []Meta
-	pageNum        int
-	pageTotal      int
-	articlePerPage int
-	articleTotal   int
+	PageNum        int
+	PageTotal      int
+	ArticlePerPage int
+	ArticleTotal   int
 
 	normFlag bool // true代表是正常的列表页面
 }
@@ -125,25 +126,25 @@ func (al *ArticleList) GetNum() {
 
 	if al.normFlag {
 		seg := finds[0]
-		// pageNum
+		// PageNum
 		pat := regexp.MustCompile(`data-page-number="(.*?)"`)
 		pageNum := pat.FindStringSubmatch(seg)[1]
-		al.pageNum, _ = strconv.Atoi(pageNum)
+		al.PageNum, _ = strconv.Atoi(pageNum)
 
-		// pageTotal
+		// PageTotal
 		pat = regexp.MustCompile(`data-total-page="(.*?)"`)
 		pageTotal := pat.FindStringSubmatch(seg)[1]
-		al.pageTotal, _ = strconv.Atoi(pageTotal)
+		al.PageTotal, _ = strconv.Atoi(pageTotal)
 
 		// articlePerPage
 		pat = regexp.MustCompile(`data-page-size="(.*?)"`)
 		articlePerPage := pat.FindStringSubmatch(seg)[1]
-		al.articlePerPage, _ = strconv.Atoi(articlePerPage)
+		al.ArticlePerPage, _ = strconv.Atoi(articlePerPage)
 
 		// articleTotal
 		pat = regexp.MustCompile(`data-total-row="(.*?)"`)
 		articleTotal := pat.FindStringSubmatch(seg)[1]
-		al.articleTotal, _ = strconv.Atoi(articleTotal)
+		al.ArticleTotal, _ = strconv.Atoi(articleTotal)
 	}
 
 }
