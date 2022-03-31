@@ -1,1 +1,0 @@
-.\cmd\query\query.exe -type 2 -participle on

@@ -224,7 +224,7 @@ Redirect:
 			err := fmt.Errorf("重定向location获取为空")
 			return nil, err
 		}
-		fmt.Println("正在跳转：", location)
+		// fmt.Println("正在跳转：", location)
 
 		setCookie := resp.Header.Get("Set-Cookie")
 		if setCookie != "" {

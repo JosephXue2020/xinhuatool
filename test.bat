@@ -1,0 +1,1 @@
+.\cmd\glue\glue.exe -m=1

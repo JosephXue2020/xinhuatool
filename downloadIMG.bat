@@ -1,1 +1,1 @@
-.\cmd\media\media.exe
+.\cmd\media\media.exe -withPrefix=true

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"projects/xinhuatool/pkg/media"
 	"projects/xinhuatool/util"
@@ -11,7 +12,7 @@ func main() {
 	// 读取数据
 	path := "./图片id列表.xlsx"
 	ids := readID(path)
-	fmt.Println(ids)
+	// fmt.Println(ids)
 
 	// id通道
 	idNum := len(ids)
@@ -25,7 +26,15 @@ func main() {
 	resultChan := make(chan media.Metas, idNum)
 
 	// 图片保存目录
-	timePrefix := util.TimePrefix()
+	// 获取程序执行参数，如果是without，时间前缀为空。这是为了粘贴多个过程之用
+	withPrefix := flag.Bool("withPrefix", true, "true，给图片文件夹和meta信息表都加上时间前缀；false，相反")
+	flag.Parse()
+	var timePrefix string
+	if *withPrefix {
+		timePrefix = util.TimePrefix()
+	} else {
+		timePrefix = ""
+	}
 	imgDir := "./data/" + timePrefix + "image"
 	util.ExistOrCreate(imgDir)
 

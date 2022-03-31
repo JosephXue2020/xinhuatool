@@ -24,7 +24,11 @@ func main() {
 	// 检索参数
 	pcFlag := flag.String("participle", "on", "Help: on means accurate; off mean fuzzy.")
 	tpFlag := flag.Int("type", 2, "Help: 2 is image; 3 is audio; 4 is vedio.")
+
+	// 获取程序执行参数，如果是without，时间前缀为空。这是为了粘贴多个过程之用
+	withPrefix := flag.Bool("withPrefix", true, "true，给图片文件夹和meta信息表都加上时间前缀；false，相反")
 	flag.Parse()
+
 	queryParam := &QueryParam{
 		participle:   *pcFlag,
 		pg:           1,
@@ -54,7 +58,13 @@ func main() {
 	close(resultChan)
 
 	// 保存结果
-	saveResult("./data/检索结果.xlsx", resultChan)
+	var timePrefix string
+	if *withPrefix {
+		timePrefix = util.TimePrefix()
+	} else {
+		timePrefix = ""
+	}
+	saveResult("./data/"+timePrefix+"检索结果.xlsx", resultChan)
 
 	fmt.Println("Complete!")
 
