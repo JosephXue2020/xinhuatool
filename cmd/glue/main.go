@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"projects/xinhuatool/pkg/office"
+	"projects/xinhuatool/util"
 	"strconv"
 
 	"github.com/360EntSecGroup-Skylar/excelize"
@@ -75,17 +76,45 @@ func idx2Col(i int) string {
 }
 
 func inputImg() {
-	src := "./data/图片下载信息表.xlsx"
-	items, err := office.ReadExcel(src, "Sheet1")
+	src1 := "./data/检索结果.xlsx"
+	items1, err := office.ReadExcel(src1, "Sheet1")
+	if err != nil {
+		panic("读取检索结果表格失败")
+	}
+
+	src2 := "./data/图片下载信息表.xlsx"
+	items2, err := office.ReadExcel(src2, "Sheet1")
 	if err != nil {
 		panic("读取图片下载信息表失败")
 	}
 
-	l := len(items)
+	if len(items1) != len(items2) {
+		panic("两个表格不匹配")
+	}
+	l := len(items1)
+
+	var itemTot [][]string
+	for i := 0; i < l; i++ {
+		var temp []string
+		temp = append(items1[i], items2[i][1:]...)
+		itemTot = append(itemTot, temp)
+	}
+
+	util.RemoveFileIfExist(src1)
+	util.RemoveFileIfExist(src2)
+	office.WriteExcel(src1, itemTot[1:], itemTot[0])
+
+	// 再次读取
+	items, err := office.ReadExcel(src1, "Sheet1")
+	if err != nil {
+		panic("结果表格失败")
+	}
+
+	l = len(items)
 	colnum := len(items[0])
 	colName := idx2Col(colnum)
 
-	xlsx, err := excelize.OpenFile(src)
+	xlsx, err := excelize.OpenFile(src1)
 	if err != nil {
 		panic("读取图片下载信息表失败")
 	}
@@ -101,7 +130,7 @@ func inputImg() {
 		office.AddImgToExcel(xlsx, "Sheet1", cell, 80, 80, imgPath)
 	}
 
-	err = xlsx.SaveAs(src)
+	err = xlsx.SaveAs(src1)
 	if err != nil {
 		panic("保存最终结果失败")
 	}
